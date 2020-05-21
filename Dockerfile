@@ -5,8 +5,8 @@ RUN pip install pymc3 seaborn statsmodels jupyter
 RUN mkdir -p /opt
 WORKDIR /opt
 
-ADD day_in_the_life.ipynb .
-ADD data.csv .
+ADD *.ipynb /opt/ 
+ADD *.csv /opt/
 
 EXPOSE 8888
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=''","--NotebookApp.password=''"]
