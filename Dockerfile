@@ -1,7 +1,7 @@
 FROM python:3.7.7-slim-buster
 
 RUN apt-get update && apt-get install -y build-essential
-RUN pip install pymc3 seaborn statsmodels jupyter
+RUN pip install pymc3 seaborn statsmodels jupyter scikit-learn
 RUN mkdir -p /opt
 WORKDIR /opt
 
